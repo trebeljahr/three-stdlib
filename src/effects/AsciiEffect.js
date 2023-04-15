@@ -79,9 +79,6 @@ const AsciiEffect = function (renderer, charSet, options) {
       oAscii.rows[0].cells[0].style.color = oImg.style.color
     }
 
-    oAscii.cellSpacing = 0
-    oAscii.cellPadding = 0
-
     const oStyle = oAscii.style
     oStyle.display = 'inline'
     oStyle.width = `${Math.round((iWidth / fResolution) * iScale)}px`
