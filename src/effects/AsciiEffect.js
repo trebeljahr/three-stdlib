@@ -193,6 +193,8 @@ const AsciiEffect = function (renderer, charSet, options) {
   // convert img element to ascii
 
   function asciifyImage(canvasRenderer, oAscii) {
+    if (!iWidth || !iHeight || !oCtx) return
+
     oCtx.clearRect(0, 0, iWidth, iHeight)
     oCtx.drawImage(oCanvasImg, 0, 0, iWidth, iHeight)
     const oImgData = oCtx.getImageData(0, 0, iWidth, iHeight).data
