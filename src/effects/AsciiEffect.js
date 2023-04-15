@@ -96,11 +96,11 @@ const AsciiEffect = function (renderer, charSet, options) {
 
   const aDefaultCharList = ' .,:;i1tfLCG08@'.split('')
   const aDefaultColorCharList = ' CGO08@'.split('')
-  var strFont = 'courier new, monospace'
+  let strFont = 'courier new, monospace'
 
   const oCanvasImg = renderer.domElement
 
-  var oCanvas = document.createElement('canvas')
+  let oCanvas = document.createElement('canvas')
   if (!oCanvas.getContext) {
     return
   }
@@ -131,13 +131,12 @@ const AsciiEffect = function (renderer, charSet, options) {
   if (bResolution) fResolution = bResolution
 
   // Setup dom
-
-  var fFontSize = (2 / fResolution) * iScale
-  var fLineHeight = (2 / fResolution) * iScale
+  let fFontSize = (2 / fResolution) * iScale
+  let fLineHeight = (2 / fResolution) * iScale
 
   // adjust letter-spacing for all combinations of scale and resolution to get it to fit the image width.
 
-  var fLetterSpacing = 0
+  let fLetterSpacing = 0
 
   if (strResolution == 'low') {
     switch (iScale) {
